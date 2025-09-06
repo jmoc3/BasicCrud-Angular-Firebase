@@ -1,0 +1,12 @@
+<section class="grid gap-8 px-16">
+  <a
+    routerLink="new"
+    class="text-center py-4 rounded bg-[#303030] text-sm cursor-pointer"
+    >Agregar nueva tarea</a
+  >
+  @if (taskService.loading()) {
+    <p class="text-center text-sm">Cargando tareas...</p>
+  } @else {
+    <app-table [tasks]="tasks()" />
+  }
+</section>
