@@ -1,34 +1,34 @@
-import { inject, Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core'
 import {
   Auth,
   createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
-} from '@angular/fire/auth';
+  signInWithEmailAndPassword
+} from '@angular/fire/auth'
 
 export interface User {
-  email: string;
-  password: string;
+  email: string
+  password: string
 }
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class AuthService {
-  private _auth = inject(Auth);
+  private _auth = inject(Auth)
 
   async signUp(user: User) {
     return await createUserWithEmailAndPassword(
       this._auth,
       user.email,
-      user.password,
-    );
+      user.password
+    )
   }
 
   async signIn(user: User) {
     return await signInWithEmailAndPassword(
       this._auth,
       user.email,
-      user.password,
-    );
+      user.password
+    )
   }
 }

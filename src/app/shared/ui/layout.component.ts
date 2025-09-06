@@ -1,6 +1,6 @@
-import { Component, inject } from '@angular/core';
-import { Router, RouterModule } from '@angular/router';
-import { AuthStateService } from '../../auth/shared/data-access/auth-state.service';
+import { Component, inject } from '@angular/core'
+import { Router, RouterModule } from '@angular/router'
+import { AuthStateService } from '../../auth/shared/data-access/auth-state.service'
 
 @Component({
   standalone: true,
@@ -21,14 +21,14 @@ import { AuthStateService } from '../../auth/shared/data-access/auth-state.servi
       </button>
     </header>
     <router-outlet />
-  `,
+  `
 })
 export default class LayoutComponent {
-  private _authState = inject(AuthStateService);
-  private _route = inject(Router);
+  private _authState = inject(AuthStateService)
+  private _route = inject(Router)
 
   async logOut() {
-    await this._authState.logOut();
-    this._route.navigateByUrl('/auth/sign-in');
+    await this._authState.logOut()
+    this._route.navigateByUrl('/auth/sign-in')
   }
 }

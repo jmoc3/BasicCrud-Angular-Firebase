@@ -1,16 +1,16 @@
-import { FormGroup } from '@angular/forms';
+import { FormGroup } from '@angular/forms'
 
 export const isRequired = (field: 'email' | 'password', form: FormGroup) => {
-  const control = form.get(field);
-  return control && control.touched && control.hasError('required');
-};
+  const control = form.get(field)
+  return control && control.touched && control.hasError('required')
+}
 
 export const hasEmailError = (form: FormGroup) => {
-  const control = form.get('email');
-  return control && control.touched && control.hasError('email');
-};
+  const control = form.get('email')
+  return control && control.touched && control.hasError('email')
+}
 
 export const hasPasswordError = (form: FormGroup) => {
-  const control = form.get('password');
-  return control && control.touched && control.hasError('minlength');
-};
+  const control = form.get('password')
+  return control && control.touched && control.hasError('minlength')
+}

@@ -1,9 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nata+Sans:wght@100..900&display=swap");
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nata+Sans:wght@100..900&display=swap');
+@import 'tailwindcss';
 
 * {
-  font-family: "Nata Sans", sans-serif;
+  font-family: 'Nata Sans', sans-serif;
 }
 
 body {
